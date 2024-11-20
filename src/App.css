@@ -1,0 +1,109 @@
+.home {
+  height: 100vh;
+  margin: -1vh;
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home,
+.task {
+  transition: all 1.5s ease;
+}
+.light_mode.home {
+  background: white;
+  color: black;
+  box-shadow: inset 0rem 0rem 5rem black;
+  transition: all 1.5s ease;
+}
+.light_mode .task-light_mode.task {
+  border: 2px solid black;
+  background: auto;
+  color: black;
+}
+.dark_mode.home {
+  background: black;
+  box-shadow: inset 0rem 0rem 5rem rgb(70, 69, 69),
+    inset 0rem 0rem 10rem rgb(59, 58, 58);
+  transition: all 1.5s ease;
+  color: gray;
+}
+.dark_mode .task-dark_mode.task {
+  border: 2px solid white;
+  background: inherit;
+  color: white;
+}
+.create_form input {
+  font-family: monospace;
+  background: inherit;
+  color: inherit;
+  min-width: 35dvi;
+  max-width: 75dvi;
+  padding: 1ch;
+  border-bottom: 2px solid;
+  outline: none;
+}
+.create_form button {
+  padding: 1ch;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.completed.task {
+  border: 2px solid green !important;
+}
+.completed.task .checkbox {
+  color: green;
+}
+.completed.task .delete {
+  color: red;
+}
+.task {
+  display: flex;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  justify-content: space-between;
+  min-width: 35dvi;
+  width: 38dvi;
+  align-items: center;
+  border-radius: 2ch;
+  padding: 1ch 1.3ch;
+  outline: invert;
+  margin-top: 1.3ch;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.checkbox .icon {
+  margin-right: 1ch;
+  font-size: 1.5ch;
+}
+.checkbox p {
+  max-width: 15rem;
+  line-break: strict;
+  overflow: hidden;
+}
+.checkbox p:hover {
+  overflow-wrap: break-word;
+}
+.checkbox .blur {
+  text-decoration: line-through;
+}
+.task div span {
+  margin: 0 1ch 0 1ch;
+}
+.task div .icon {
+  cursor: pointer;
+}
+.mode {
+  position: fixed;
+  z-index: 2;
+  top: 0%;
+  right: 0%;
+  padding: 1dvh;
+}
+.mode .icon {
+  width: 3dvw;
+  height: 3dvh;
+}
